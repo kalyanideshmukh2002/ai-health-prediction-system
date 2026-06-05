@@ -110,20 +110,24 @@ elif choice == "Update Patient":
 
     new_glucose = st.number_input("New Glucose")
     new_cholesterol = st.number_input("New Cholesterol")
+    new_hemoglobin = st.number_input("New Hemoglobin")
+
 
     if st.button("Update"):
 
-        new_remarks = predict_health(new_glucose, new_cholesterol)
+        new_remarks = predict_health(new_glucose, new_cholesterol,new_hemoglobin)
 
         cursor.execute("""
         UPDATE patients
         SET glucose=?,
             cholesterol=?,
+             hemoglobin=?,
             remarks=?
         WHERE id=?
         """, (
             new_glucose,
             new_cholesterol,
+            new_hemoglobin,
             new_remarks,
             patient_id
         ))
