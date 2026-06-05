@@ -17,3 +17,9 @@ Prediction Logic:
 - High glucose → Diabetes Risk
 - High cholesterol → Heart Disease Risk
 - Low hemoglobin → Anemia Risk
+
+- HOW TO RUN:
+1.INSTALL DEPENDENCIES:
+Pip install -r requirments.txt
+2.Run the application:
+streamlit run app.py
